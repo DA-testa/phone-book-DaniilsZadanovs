@@ -20,11 +20,11 @@ def process_queries(queries):
     contacts = {}
     for cur_query in queries:
         if cur_query.type == 'add':
-           contects[cur_query.number]=cur_query.name
+           contacts[cur_query.number]=cur_query.name
         elif cur_query.type == 'del':
             contacts.pop(cur_query.number, None)
         else:
-            resp=contects.get(cur_query.number,'not found')
+            resp=contacts.get(cur_query.number,'not found')
     return result
 
 if __name__ == '__main__':
